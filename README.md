@@ -1,14 +1,22 @@
-# Sticky Practice for Lımerence V2
-This project was developed to practice the **CSS animations I learned in class.
-**The code has been simplified.
-**A text box with a fade-in animation was added to the About Us section.
-**The Mail, Social Media, and FAQ options were converted to Bootstrap icons.
-## 🛠️Technologies Used
-- HTML5 & CSS3
-- Google Fonts (Noto Sans)
-- Bootstrap Icons
-## 📸There are 4 main sections on the site:
-1. Home (Limerence Logo)
-2. Epoxy Product Group
-3. Ceramics Product Group
-4. About Us & Contact
+# Limerence - Elegant Web Showcase (v2.1)
+
+This project is a web interface demo focused on modern CSS techniques, fluid animations, and user experience (UX).
+
+## 🚀 Latest Updates (v2.1)
+- **Code Reorganization:** Optimized according to “Clean Code” standards.
+- **Dynamic Navigation:** Shopping cart and member profile icons added.
+- **Enhanced Visuals:** Multi-layered **Neon Glow** effect applied using `text-shadow`.
+- **Scroll-based Animations** integrated with CSS `@keyframes` and `filter: blur()`.
+- **Responsive Design:** `clamp()` function used for fluid typography on Mobile, Tablet, and Desktop.
+- **Performance:** Safari compatibility improved using `-webkit-backdrop-filter`.
+
+## 🛠️ Techniques
+- **HTML5:** Semantic structure.
+- **CSS3:** Advanced animations, Flexbox, Sticky positioning, and CSS Variables.
+- **Icons:** Bootstrap Icons.
+
+## 📂 Project Structure
+- `index.html`: Main landing page with sticky sections.
+- `assets/`: Image resources.
+
+Translated with DeepL.com (free version)
