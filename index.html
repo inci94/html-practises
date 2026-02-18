@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Limerence - Sticky Practice</title>
+    <title>Limerence - Elegant Showcase</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Noto Sans', sans-serif; background-color: #fff; }
-
-        .navbar {
-            position: fixed; top: 0; width: 100%; z-index: 1000;
-            display: flex; justify-content: center; padding: 30px 60px;
+        :root {
+            --primary-color: #a30f59;
+            --neon-glow: rgba(226, 7, 117, 0.8);
         }
-        .logo {
-            font-family: serif; font-size: 65px; color: #630d16;
-            text-decoration: none; letter-spacing: 2px;
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans', sans-serif; background-color: #fff; overflow-x: hidden; }
+
+        .navbar-top-right {
+            position: fixed; top: 40px; right: 50px; z-index: 2000; display: flex; gap: 25px;
+        }
+
+        .navbar-top-right a {
+            color: var(--primary-color); font-size: 24px; text-decoration: none; 
+            transition: transform 0.3s ease, opacity 0.3s ease; opacity: 0.8;
+        }
+
+        .navbar-top-right a:hover { 
+            opacity: 1; transform: scale(1.1) translateY(-3px);
         }
 
         .section {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: white;
+            position: sticky; top: 0; width: 100%; height: 100vh; display: flex; align-items: center;
+            justify-content: center; overflow: hidden; background: white;
         }
 
         .section img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
+            position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
         }
 
         .section:nth-of-type(1) { z-index: 1; }
@@ -47,79 +45,77 @@
         .section:nth-of-type(4) { z-index: 4; }
 
         .hero-title {
-            color: #630d16;
-            font-size: 5rem;
-            font-weight: 200;
-            text-transform: uppercase;
-            letter-spacing: 15px;
-            text-align: center;
-            z-index: 10;
-            position: relative;
+            color: #d33eb0;  font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 100; text-transform: uppercase;
+            letter-spacing: clamp(10px, 3vw, 15px); text-align: center; z-index: 10; position: relative; text-shadow:
+                0 0 10px var(--neon-glow),
+                0 0 20px rgba(163, 15, 89, 0.5),
+                0 0 40px rgba(163, 15, 89, 0.3);
+            animation: titleReveal 1.5s ease-out forwards; opacity: 0;
+        }
+
+        @keyframes titleReveal {
+            0% {
+                opacity: 0; transform: translateY(20px); filter: blur(10px);
+            }
+
+            100% {
+                opacity: 1; transform: translateY(0); filter: blur(0);
+            }
         }
 
         .about-details { z-index: 20; text-align: center; width: 80%; max-width: 600px; position: relative; }
-        .about-details summary { list-style: none; outline: none; cursor: pointer; }
-        .about-details summary::-webkit-details-marker { display: none; }
-
+        
         .brand-text {
-            color: #630d16;
-            font-size: 1.2rem;
-            margin-top: 20px;
-            background: rgba(255, 255, 255, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(8px);
+            color: var(--primary-color); font-size: 1.1rem; margin-top: 20px; background: rgba(103, 11, 71, 0.7);
+            padding: 20px; border-radius: 15px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
         }
 
         .footer-info {
-            position: absolute;
-            bottom: 40px;
-            display: flex;
-            gap: 40px;
-            z-index: 30;
+            position: absolute; bottom: 20px; display: flex; gap: 25px; z-index: 30;
         }
-        .footer-info a { color: #630d16; font-size: 32px; text-decoration: none; }
+        .footer-info a { color: var(--primary-color); font-size: 22px; text-decoration: none; transition: 0.3s; }
+        .footer-info a:hover { transform: scale(1.2); }
 
-        @keyframes fadeInCustom {
-            0% { opacity: 0; transform: translateY(30px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        details[open] .brand-text { animation: fadeInCustom 0.8s ease-out forwards; }
-        .animate-me { animation: fadeInCustom 1.2s ease-out forwards; }
     </style>
 </head>
 <body>
 
-        <div class="section">
-          <img src="1-5.jpg">
-          <h1 class="hero-title">LIMERENCE</h1>
-        </div>
+    <nav class="navbar-top-right">
+        <a href="member.html" title="Üye Ol"><i class="bi bi-person-circle"></i></a>
+        <a href="card.html" title="Sepetim"><i class="bi bi-basket3"></i></a>
+    </nav>
 
-        <div class="section">
-          <img src="pic-4.jpg">
-          <h1 class="hero-title">Epoxy</h1>
-        </div>
+    <div class="section">
+        <img src="1-5.jpg">
+        <h1 class="hero-title">LIMERENCE</h1>
+    </div>
 
-        <div class="section">
-          <img src="pic-2.jpg">
-          <h1 class="hero-title">Ceramics</h1>
-        </div>
+    <div class="section">
+        <img src="pic-4.jpg">
+        <h1 class="hero-title">Epoxy</h1>
+    </div>
 
-        <div class="section">
-          <img src="1-5.jpg"> 
+    <div class="section">
+        <img src="pic-2.jpg">
+        <h1 class="hero-title">Ceramics</h1>
+    </div>
+
+    <div class="section">
+        <img src="1-5.jpg"> 
         
         <details class="about-details">
-            <summary class="hero-title">About Us</summary>
+            <summary class="hero-title" style="cursor: pointer; list-style: none;">About Us</summary>
             <p class="brand-text">
-            Our brand, established in 2025, will make you and your partner shine with its creative team and unique designs.
+                Our brand, established in 2025, will make you and your partner shine with its creative team and unique designs.
             </p>
         </details>
 
-        <div class="footer-info animate-me">
+        <div class="footer-info">
             <a href="#"><i class="bi bi-question-circle"></i></a>
             <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
             <a href="mailto:info@limerence.com"><i class="bi bi-envelope"></i></a>
         </div>
     </div>
- </body>
+
+</body>
 </html>
