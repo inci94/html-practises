@@ -18,5 +18,3 @@ This project is a web interface demo focused on modern CSS techniques, fluid ani
 ## 📂 Project Structure
 - `index.html`: Main landing page with sticky sections.
 - `assets/`: Image resources.
-
-Translated with DeepL.com (free version)
