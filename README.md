@@ -1,20 +1,8 @@
-# Limerence - Elegant Web Showcase (v2.1)
+💎Limerence - Latest Updates (v2.2)
 
-This project is a web interface demo focused on modern CSS techniques, fluid animations, and user experience (UX).
+🚀We had previously renamed the file to limerence.html, but since I found that to be unsuitable, I reverted the filename to its original form. In this version, the project has been expanded from a single landing page to a multi-page structure. The index.html and collection.html pages have been linked together.
 
-## 🚀 Latest Updates (v2.1)
-- **Code Reorganization:** Optimized according to “Clean Code” standards.
-- **Dynamic Navigation:** Shopping cart and member profile icons added.
-- **Enhanced Visuals:** Multi-layered **Neon Glow** effect applied using `text-shadow`.
-- **Scroll-based Animations** integrated with CSS `@keyframes` and `filter: blur()`.
-- **Responsive Design:** `clamp()` function used for fluid typography on Mobile, Tablet, and Desktop.
-- **Performance:** Safari compatibility improved using `-webkit-backdrop-filter`.
+✨Subpage Navigation: A minimalist sidebar has been added that remains fixed and adapts to different page sizes.
 
-## 🛠️ Techniques
-- **HTML5:** Semantic structure.
-- **CSS3:** Advanced animations, Flexbox, Sticky positioning, and CSS Variables.
-- **Icons:** Bootstrap Icons.
-
-## 📂 Project Structure
-- `index.html`: Main landing page with sticky sections.
-- `assets/`: Image resources.
+🛠️Component-Based Design: Standardized “Product Card” components featuring hover effects and real-time cart status indicators.
+ böyle diycem çünkü onu silersem o commiti silmem gerek ve eski dosyada o güncellemeler yok In this version, the project has been expanded from a single landing page to a multi-page structure. The index.html and collection.html pages have been linked together.
