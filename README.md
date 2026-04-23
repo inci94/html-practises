@@ -4,6 +4,7 @@ feat: Add the Ceramics collection and refactor the product grid for improved res
 Limerence is an e-commerce showcase project that combines handmade epoxy and ceramic art with a modern web interface.
 
 ## 🌟 Latest Updates (v2.3)
+- **New Collection:** The “Ceramics Collection” has been added.
 - **Grid System Refactor:** Nesting errors in product cards have been fixed, and a razor-sharp 4-column layout has been implemented for desktop.
 - **Styling Fix:** Color conflicts in product names and prices were resolved by reorganizing the CSS hierarchy.
 
