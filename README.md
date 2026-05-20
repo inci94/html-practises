@@ -1,17 +1,15 @@
+# Lımerence E-Commerce Project
 
-feat: Add the Ceramics collection and refactor the product grid for improved responsiveness# 💎 Limerence - Jewelry Showcase (v2.3)
+## Recent Updates and Improvements
 
-Limerence is an e-commerce showcase project that combines handmade epoxy and ceramic art with a modern web interface.
+### 1. Multi-Page Navigation and Architecture
+***Inter Page Links:*** The global sidebar navigation mechanism has been completed. Users can now seamlessly navigate between the 'Home', 'Epoxy Collection', 'Ceramic Collection' and 'Blog' sections without disrupting the page layout.
 
-## 🌟 Latest Updates (v2.3)
-- **New Collection:** The “Ceramics Collection” has been added.
-- **Grid System Refactor:** Nesting errors in product cards have been fixed, and a razor-sharp 4-column layout has been implemented for desktop.
-- **Styling Fix:** Color conflicts in product names and prices were resolved by reorganizing the CSS hierarchy.
+### 2. Blog Integration and Dynamic Images
+***Blog Section Added ('blog.html'):** A minimalist, text-focused blog layout designed to host maintenance instructions and brand stories has been developed.
+***Shared Style Injection:** To maintain the consistency of the design system, general theme rules (':root' variables, sidebar layout, structural grid patterns) were integrated within the blog's context.
 
-## 🚀 Collections
-* **Epoxy Collection:** A blend of resin and natural materials.
-* **Ceramic Collection:** A ceramic art with jewelry design.
+### 3. UI / UX Elements
+***Dynamic Status Ticker:** An animated CSS marquee/ticker was implemented next to the lightning icon ('bi-lightning-fill). This component dynamically cycles through real-time product micro-interactions such as *"Limited Stock"*, *"In Carts"*, and "*Most Popular"*.
 
-## 🛠️ Technical Details
-* **Semantic HTML5:** Structured using meaningful tags such as `article`, `header`, and `nav`.
-* **Responsive Design:** A flexible structure that adapts seamlessly to all screen sizes (Mobile, Tablet, Desktop)
+All of this reflects a fictional site architecture where Iapplied what I've learned during my HTML learning process.
