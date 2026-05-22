@@ -14,7 +14,7 @@
             --primary: #a30f59;
             --primary-light: rgba(163, 15, 89, 0.1);
             --neon: rgba(226, 7, 117, 0.8);
-            --bg-light: #f3c1fa;
+            --bg-light: #d2e7ba;
             --text-dark: #1a1a1a;
             --sidebar-width: 260px;
             --transition: all 0.3s ease;
@@ -43,7 +43,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            background: #f3c1fa;
+            background: #d2e7ba;
             padding: 4rem 2rem;
             display: flex;
             flex-direction: column;
@@ -226,6 +226,45 @@
             align-items: center;
             gap: 6px;
             font-weight: 600;
+            height: 20px;
+            overflow: hidden;
+            line-height: 20px;
+        }
+
+        .status-ticker {
+            display: flex;
+            flex-direction: column;
+            height: 20px;
+            animation: tickerMove 9s cubic-bezier(0.645, 0.045, 0.355, 1)infinite;
+        }
+
+        ticker-item {
+            height: 20px;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        @keyframes tickerMove {
+
+            0%,
+            25% {
+                transform: translateY(0);
+            }
+
+            30%,
+            55% {
+                transform: translateY(-20px);
+            }
+
+            60%,
+            85% {
+                transform: translateY(-40px);
+            }
+
+            100 {
+                transform: translateY(-60px);
+            }
         }
 
         @media (max-width: 768px) {
@@ -253,13 +292,12 @@
     <div class="app-layout">
         <aside class="sidebar">
             <h2 class="brand-logo" style="color: var(--primary); font-weight: 700; letter-spacing: 3px;">LIMERENCE</h2>
-            <div class="nav-list">
+            <nav class="nav-list">
                 <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
-                <div class="nav-item"><a href="#" class="nav-link">Epoxy</a></div>
-                <div class="nav-item"><a href="#" class="nav-link">Ceramics</a></div>
-                <div class="nav-item"><a href="#" class="nav-link">Populars</a></div>
-                <div class="nav-item"><a href="#" class="nav-link">Blog</a></div>
-            </div>
+                <div class="nav-item"><a href="collection-epoxy.html" class="nav-link">Epoxy</a></div>
+                <div class="nav-item"><a href="collection-ceramics.html" class="nav-link">Ceramics</a></div>
+                <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+            </nav>
         </aside>
 
         <main class="main-content">
@@ -287,8 +325,13 @@
                                 <p class="card-price">20 $</p>
                                 <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
-                            <div class="card-status"><i class="bi bi-lightning-fill"></i> In 5 People's Carts</div>
-                        </div>
+                            <div class="card-status"><i class="bi bi-lightning-fill"></i>
+                                <div class="status-ticker">
+                                    <div class="ticker-item">28 People visited</div>
+                                    <div class="ticker-item">In 40 People charts</div>
+                                    <div class="ticker-item">12 People favorite</div>
+                                </div>
+                            </div>
                     </article>
 
                     <article class="card">
@@ -305,8 +348,13 @@
                                 <p class="card-price">25 $</p>
                                 <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
-                            <div class="card-status"><i class="bi bi-lightning-fill"></i> Limited Stock</div>
-                        </div>
+                            <div class="card-status"><i class="bi bi-lightning-fill"></i>
+                                <div class="status-ticker">
+                                    <div class="ticker-item">14 People visited</div>
+                                    <div class="ticker-item">In 22 People charts</div>
+                                    <div class="ticker-item">18 People favorite</div>
+                                </div>
+                            </div>
                     </article>
 
                     <article class="card">
@@ -324,8 +372,13 @@
                                 <p class="card-price">30 $</p>
                                 <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
-                            <div class="card-status"><i class="bi bi-lightning-fill"></i> Best Selling</div>
-                        </div>
+                            <div class="card-status"><i class="bi bi-lightning-fill"></i>
+                                <div class="status-ticker">
+                                    <div class="ticker-item">17 People visited</div>
+                                    <div class="ticker-item">In 23 People charts</div>
+                                    <div class="ticker-item">11 People favorite</div>
+                                </div>
+                            </div>
                     </article>
 
                     <article class="card">
@@ -341,8 +394,13 @@
                                 <p class="card-price">25 $</p>
                                 <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
-                            <div class="card-status"><i class="bi bi-lightning-fill"></i>Limited Edition</div>
-                        </div>
+                            <div class="card-status"><i class="bi bi-lightning-fill"></i>
+                                <div class="status-ticker">
+                                    <div class="ticker-item">38 People visited</div>
+                                    <div class="ticker-item">In 43 people charts</div>
+                                    <div class="tickeer-item">19 People favorite</div>
+                                </div>
+                            </div>
                     </article>
 
                     <article class="card">
@@ -408,3 +466,11 @@
                             </div>
                         </div>
                     </article>
+
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
