@@ -1,15 +1,11 @@
-# Lımerence E-Commerce Project
+## Lımerence E-Commerce Project ##
 
-## Recent Updates and Improvements
+## Recent Updates and Improvements ##
 
-### 1. Multi-Page Navigation and Architecture
-***Inter Page Links:*** The global sidebar navigation mechanism has been completed. Users can now seamlessly navigate between the 'Home', 'Epoxy Collection', 'Ceramic Collection' and 'Blog' sections without disrupting the page layout.
+🤖 The background color of the page, which was considered to strain the eyes, was changed from light green tones to light pink tones; to ensure visual consistency, the same color was also used as the background for the slider on the homepage.
 
-### 2. Blog Integration and Dynamic Images
-***Blog Section Added ('blog.html'):** A minimalist, text-focused blog layout designed to host maintenance instructions and brand stories has been developed.
-***Shared Style Injection:** To maintain the consistency of the design system, general theme rules (':root' variables, sidebar layout, structural grid patterns) were integrated within the blog's context.
+🤖The nested layout in the code was fixed; this resolved the issue where icons and tooltips overlapped, appeared upside down, or extended beyond the card borders in product card views.
 
-### 3. UI / UX Elements
-***Dynamic Status Ticker:** An animated CSS marquee/ticker was implemented next to the lightning icon ('bi-lightning-fill). This component dynamically cycles through real-time product micro-interactions such as *"Limited Stock"*, *"In Carts"*, and "*Most Popular"*.
+🤖The issue where icon colors on the homepage matched the background color has been resolved.
 
-All of this reflects a fictional site architecture where Iapplied what I've learned during my HTML learning process.
+🤖Icons on the homepage now remain fixed as the page is scrolled.

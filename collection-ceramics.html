@@ -4,17 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Limerence - Epoxy Collection</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+    <title>Limerence - Ceramic Collection</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <style>
         :root {
             --primary: #a30f59;
             --primary-light: rgba(163, 15, 89, 0.1);
             --neon: rgba(226, 7, 117, 0.8);
-            --bg-light: #d2e7ba;
+            --bg-light: #f7def4;
             --text-dark: #1a1a1a;
             --sidebar-width: 260px;
             --transition: all 0.3s ease;
@@ -43,7 +40,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            background: #d2e7ba;
+            background: #f7def4;
             padding: 4rem 2rem;
             display: flex;
             flex-direction: column;
@@ -122,13 +119,6 @@
             gap: 2.5rem;
         }
 
-        .card-name {
-            font-weight: 400;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
         .card {
             background: rgb(242, 212, 248);
             border-radius: 12px;
@@ -137,6 +127,7 @@
             border: 1px solid rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
+            height: 100%;
         }
 
         .card:hover {
@@ -176,7 +167,32 @@
             padding: 1.5rem;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            flex-grow: 1;
+        }
+
+        .card-name {
+            font-weight: 400;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            min-height: 24px;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 5px;
+            margin: 5px 0;
+            flex-wrap: wrap;
+            min-height: 22px;
+        }
+
+        .size-tag {
+            border: 1px solid rgba(163, 15, 89, 0.3);
+            padding: 2px 8px;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            color: var(--primary);
+            line-height: 1;
         }
 
         .price-row {
@@ -184,7 +200,8 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            margin-top: 5px;
+            margin-top: auto;
+            padding-bottom: 5px;
         }
 
         .card-price {
@@ -204,21 +221,6 @@
             transform: scale(1.2);
         }
 
-        .card-meta {
-            display: flex;
-            gap: 5px;
-            margin: 5px 0;
-            flex-wrap: wrap;
-        }
-
-        .size-tag {
-            border: 1px solid rgba(163, 15, 89, 0.3);
-            padding: 2px 8px;
-            font-size: 0.7rem;
-            border-radius: 4pFx;
-            color: var(--primary);
-        }
-
         .card-status {
             font-size: 0.8rem;
             color: #d33eb0;
@@ -227,15 +229,17 @@
             gap: 6px;
             font-weight: 600;
             height: 20px;
+            min-height: 20px;
             overflow: hidden;
             line-height: 20px;
+            margin-top: 5px;
         }
 
         .status-ticker {
             display: flex;
             flex-direction: column;
             height: 20px;
-            animation: tickerMove 9s cubic-bezier(0.645, 0.045, 0.355, 1)infinite;
+            animation: tickerMove 9s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
         }
 
         .ticker-item {
@@ -283,6 +287,17 @@
                 height: 250px;
                 border-radius: 0;
             }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -301,7 +316,6 @@
         </aside>
 
         <main class="main-content">
-
             <header class="page-header">
                 <img src="./website_image/ceramics_visual/ceramics.jpg" class="header-bg" alt="Epoxy Banner">
                 <h1 class="header-title">Ceramic Collection</h1>
@@ -323,6 +337,7 @@
                                 <p class="card-price">65 $</p>
                                 <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
+                            <div class="card-status"></div>
                         </div>
                     </article>
 
@@ -339,6 +354,7 @@
                                 <p class="card-price">70 $</p>
                                 <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
+                            <div class="card-status"></div>
                         </div>
                     </article>
 
@@ -355,6 +371,7 @@
                                 <p class="card-price">80 $</p>
                                 <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
+                            <div class="card-status"></div>
                         </div>
                     </article>
 
@@ -371,13 +388,15 @@
                                 <p class="card-price">22 $</p>
                                 <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
-                            <div class="card-status"><i class="bi bi-lightning-fill"></i>
+                            <div class="card-status">
+                                <i class="bi bi-lightning-fill"></i>
                                 <div class="status-ticker">
                                     <div class="ticker-item">50 People visited</div>
                                     <div class="ticker-item">In 10's people charts</div>
                                     <div class="ticker-item">30 People's favorite</div>
                                 </div>
                             </div>
+                        </div>
                     </article>
 
                     <article class="card">
@@ -388,19 +407,20 @@
                         <div class="card-body">
                             <h3 class="card-name">Kütahya Ring</h3>
                             <div class="card-meta">
-                                <span class="size-tag">S</span><span class="size-tag">M</span>
+                                <span class="size-tag">S</span>
+                                <span class="size-tag">M</span>
                             </div>
                             <div class="price-row">
-                                <p class="card-price">25 $</p>
+                                <span class="card-price">25 $</span>
                                 <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
-                            <div class="card-status"><i class="bi bi-lightning-fill"></i>
+                            <div class="card-status">
+                                <i class="bi bi-lightning-fill"></i>
                                 <div class="status-ticker">
-                                    <div class="ticker-item">62 People visited</div>
-                                    <div class="ticker-item">In 20's people charts</div>
                                     <div class="ticker-item">42 People's favorite</div>
                                 </div>
                             </div>
+                        </div>
                     </article>
 
                     <article class="card">
@@ -412,33 +432,21 @@
                         <div class="card-body">
                             <h3 class="card-name">Modern Ring</h3>
                             <div class="card-meta">
-                                <span class="size-tag">S</span><span class="size-tag">M</span> <span
-                                    class="size-tag">L</span>
+                                <span class="size-tag">S</span>
+                                <span class="size-tag">M</span>
+                                <span class="size-tag">L</span>
                             </div>
                             <div class="price-row">
                                 <p class="card-price">50 $</p>
                                 <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
-                            <div class="card-status"><i class="bi bi-lightning-fill"></i>
+                            <div class="card-status">
+                                <i class="bi bi-lightning-fill"></i>
                                 <div class="status-ticker">
                                     <div class="ticker-item">35 People visited</div>
                                     <div class="ticker-item">In 32 People charts</div>
                                     <div class="ticker-item">38 People favorite</div>
                                 </div>
-                            </div>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-img-wrapper">
-                            <img src="./website_image/ceramics_visual/tiepin.jpg" class="card-img" alt="Product">
-                            <button class="card-fav-icon"><i class="bi bi-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-name">Colorful Tie Pin</h3>
-                            <div class="card-meta"></div>
-                            <div class="price-row">
-                                <p class="card-price">88 $</p>
-                                <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
                         </div>
                     </article>
@@ -449,12 +457,29 @@
                             <button class="card-fav-icon"><i class="bi bi-heart"></i></button>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-name">Minimal Tie Pin</h3>
+                            <h3 class="card-name">Handmade Tiepin</h3>
                             <div class="card-meta"></div>
                             <div class="price-row">
-                                <p class="card-price">70 $</p>
+                                <p class="card-price">45 $</p>
                                 <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
                             </div>
+                            <div class="card-status"></div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="./website_image/ceramics_visual/tiepin.jpg" class="card-img" alt="Product">
+                            <button class="card-fav-icon"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-name">Vintage Ceramic Tiepin</h3>
+                            <div class="card-meta"></div>
+                            <div class="price-row">
+                                <p class="card-price">48 $</p>
+                                <a href="#" class="card-basket-icon"><i class="bi bi-basket"></i></a>
+                            </div>
+                            <div class="card-status"></div>
                         </div>
                     </article>
 
