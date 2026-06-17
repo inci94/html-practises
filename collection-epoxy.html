@@ -74,8 +74,6 @@
         .navbar-cart {
             position: relative;
             display: inline-block;
-
-
         }
 
 
@@ -86,7 +84,7 @@
             right: -14px;
             height: 14px;
             width: 14px;
-            background-color: #ff0000;
+            background-color: #ff0084;
             border-radius: 50%;
             display: flex !important;
             justify-content: center;
@@ -202,6 +200,49 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-fav-icon:hover {
+            color: var(--primary);
+            transform: scale(1.1);
+            transition: all 0.2 ease;
+        }
+
+        .card-fav-icon:active {
+            color: var(--primary);
+            tranform: scale(0.9);
+        }
+
+        .card-fav-wrapper {
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+        }
+
+        .active-heart {
+            display: none;
+            color: var(--primary);
+        }
+
+        .normal-heart {
+            color: #a30f59;
+            trnasition: transform 0.2s ease;
+        }
+
+        .card-fav-wrapper:hover .normal-heart {
+            transform: scale (1.2);
+        }
+
+        .card-fav-wrapper:active .normal-heart {
+            display: none;
+        }
+
+        .card-fav-wrapper:active .active-heart {
+            display: inline-block;
+            transform: sclae (1.2);
         }
 
         .card-body {
@@ -372,11 +413,12 @@
             <section class="content-padding">
                 <div class="grid">
 
-                    <!-- Rainbow Resin Ring -->
                     <article class="card">
                         <div class="card-img-wrapper">
                             <img src="./website_image/epoxy_visual/rainbow_ring.jpg" class="card-img" alt="Product">
-                            <button class="card-fav-icon"><i class="bi bi-heart"></i></button>
+                            <span class="card-fav-wrapper"><i class="bi bi-heart normal-heart"></i>
+                                <i class="bi bi-heart-fill active-heart"></i>
+                            </span>
                         </div>
                         <div class="card-body">
                             <h3 class="card-name">Rainbow Resin Ring</h3>
@@ -401,147 +443,145 @@
                         </div>
                     </article>
 
-                    <!-- Flower Ring -->
                     <article class="card">
                         <div class="card-img-wrapper">
                             <img src="./website_image/epoxy_visual/flower_ring.jpg" class="card-img" alt="Product">
-                            <button class="card-fav-icon"><i class="bi bi-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-name">Flower Ring</h3>
-                            <div class="card-meta">
-                                <span class="size-tag">S</span>
-                                <span class="size-tag">M</span>
-                            </div>
-                            <div class="price-row">
-                                <p class="card-price">25 $</p>
-                                <a href="card.html" target="blank" class="card-basket-icon"><i
-                                        class="bi bi-basket"></i></a>
-                            </div>
-                            <div class="card-status">
-                                <i class="bi bi-lightning-fill"></i>
-                                <div class="status-ticker">
-                                    <div class="ticker-item">14 People visited</div>
-                                    <div class="ticker-item">In 22 People charts</div>
-                                    <div class="ticker-item">18 People favorite</div>
+                            <span class="card-fav-wrapper"><i class="bi bi-heart normal-heart"></i>
+                                <i class="bi bi-heart-fill active-heart"></i>
+                            </span>
+                            <div class="card-body">
+                                <h3 class="card-name">Flower Ring</h3>
+                                <div class="card-meta">
+                                    <span class="size-tag">S</span>
+                                    <span class="size-tag">M</span>
+                                </div>
+                                <div class="price-row">
+                                    <p class="card-price">25 $</p>
+                                    <a href="card.html" target="blank" class="card-basket-icon"><i
+                                            class="bi bi-basket"></i></a>
+                                </div>
+                                <div class="card-status">
+                                    <i class="bi bi-lightning-fill"></i>
+                                    <div class="status-ticker">
+                                        <div class="ticker-item">14 People visited</div>
+                                        <div class="ticker-item">In 22 People charts</div>
+                                        <div class="ticker-item">18 People favorite</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     </article>
 
-                    <!-- Glaze Ring -->
                     <article class="card">
                         <div class="card-img-wrapper">
                             <img src="./website_image/epoxy_visual/glaze_ring.jpg" class="card-img" alt="Product">
-                            <button class="card-fav-icon"><i class="bi bi-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-name">Glaze Ring</h3>
-                            <div class="card-meta">
-                                <span class="size-tag">S</span>
-                                <span class="size-tag">M</span>
-                                <span class="size-tag">L</span>
-                            </div>
-                            <div class="price-row">
-                                <p class="card-price">30 $</p>
-                                <a href="card.html" target="blank" class="card-basket-icon"><i
-                                        class="bi bi-basket"></i></a>
-                            </div>
-                            <div class="card-status">
-                                <i class="bi bi-lightning-fill"></i>
-                                <div class="status-ticker">
-                                    <div class="ticker-item">17 People visited</div>
-                                    <div class="ticker-item">In 23 People charts</div>
-                                    <div class="ticker-item">11 People favorite</div>
+                            <span class="card-fav-wrapper"><i class="bi bi-heart normal-heart"></i>
+                                <i class="bi bi-heart-fill active-heart"></i>
+                            </span>
+                            <div class="card-body">
+                                <h3 class="card-name">Glaze Ring</h3>
+                                <div class="card-meta">
+                                    <span class="size-tag">S</span>
+                                    <span class="size-tag">M</span>
+                                    <span class="size-tag">L</span>
+                                </div>
+                                <div class="price-row">
+                                    <p class="card-price">30 $</p>
+                                    <a href="card.html" target="blank" class="card-basket-icon"><i
+                                            class="bi bi-basket"></i></a>
+                                </div>
+                                <div class="card-status">
+                                    <i class="bi bi-lightning-fill"></i>
+                                    <div class="status-ticker">
+                                        <div class="ticker-item">17 People visited</div>
+                                        <div class="ticker-item">In 23 People charts</div>
+                                        <div class="ticker-item">11 People favorite</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     </article>
 
-                    <!-- Lullaby Earring -->
                     <article class="card">
                         <div class="card-img-wrapper">
                             <img src="./website_image/epoxy_visual/ombre_earring.jpg" class="card-img" alt="Product">
-                            <button class="card-fav-icon"><i class="bi bi-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-name">Lullaby Earring</h3>
-                            <div class="card-meta"></div>
-                            <div class="price-row">
-                                <p class="card-price">25 $</p>
-                                <a href="card.html" target="blank" class="card-basket-icon"><i
-                                        class="bi bi-basket"></i></a>
-                            </div>
-                            <div class="card-status">
-                                <i class="bi bi-lightning-fill"></i>
-                                <div class="status-ticker">
-                                    <div class="ticker-item">38 People visited</div>
-                                    <div class="ticker-item">In 43 people charts</div>
-                                    <div class="ticker-item">19 People favorite</div>
+                            <span class="card-fav-wrapper"><i class="bi bi-heart normal-heart"></i>
+                                <i class="bi bi-heart-fill active-heart"></i>
+                            </span>
+                            <div class="card-body">
+                                <h3 class="card-name">Lullaby Earring</h3>
+                                <div class="card-meta"></div>
+                                <div class="price-row">
+                                    <p class="card-price">25 $</p>
+                                    <a href="card.html" target="blank" class="card-basket-icon"><i
+                                            class="bi bi-basket"></i></a>
+                                </div>
+                                <div class="card-status">
+                                    <i class="bi bi-lightning-fill"></i>
+                                    <div class="status-ticker">
+                                        <div class="ticker-item">38 People visited</div>
+                                        <div class="ticker-item">In 43 people charts</div>
+                                        <div class="ticker-item">19 People favorite</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     </article>
 
-                    <!-- Pink Earring -->
                     <article class="card">
                         <div class="card-img-wrapper">
                             <img src="./website_image/epoxy_visual/pink_earring.jpg" class="card-img" alt="Product">
-                            <button class="card-fav-icon"><i class="bi bi-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-name">Pink Earring</h3>
-                            <div class="card-meta"></div>
-                            <div class="price-row">
-                                <p class="card-price">22 $</p>
-                                <a href="card.html" target="blank" class="card-basket-icon"><i
-                                        class="bi bi-basket"></i></a>
+                            <span class="card-fav-wrapper"><i class="bi bi-heart normal-heart"></i>
+                                <i class="bi bi-heart-fill active-heart"></i>
+                            </span>
+                            <div class="card-body">
+                                <h3 class="card-name">Pink Earring</h3>
+                                <div class="card-meta"></div>
+                                <div class="price-row">
+                                    <p class="card-price">22 $</p>
+                                    <a href="card.html" target="blank" class="card-basket-icon"><i
+                                            class="bi bi-basket"></i></a>
+                                </div>
+                                <div class="card-status"></div>
                             </div>
-                            <div class="card-status"></div>
-                        </div>
                     </article>
 
-                    <!-- Red Earring -->
                     <article class="card">
                         <div class="card-img-wrapper">
                             <img src="./website_image/epoxy_visual/red_earring.jpg" class="card-img" alt="Product">
-                            <button class="card-fav-icon"><i class="bi bi-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-name">Red Earring</h3>
-                            <div class="card-meta"></div>
-                            <div class="price-row">
-                                <p class="card-price">22 $</p>
-                                <a href="card.html" target="blank" class="card-basket-icon"><i
-                                        class="bi bi-basket"></i></a>
+                            <span class="card-fav-wrapper"><i class="bi bi-heart normal-heart"></i>
+                                <i class="bi bi-heart-fill active-heart"></i> </span>
+                            <div class="card-body">
+                                <h3 class="card-name">Red Earring</h3>
+                                <div class="card-meta"></div>
+                                <div class="price-row">
+                                    <p class="card-price">22 $</p>
+                                    <a href="card.html" target="blank" class="card-basket-icon"><i
+                                            class="bi bi-basket"></i></a>
+                                </div>
+                                <div class="card-status"></div>
                             </div>
-                            <div class="card-status"></div>
-                        </div>
                     </article>
 
-                    <!-- Flower Necklace -->
                     <article class="card">
                         <div class="card-img-wrapper">
                             <img src="./website_image/epoxy_visual/flower_necklace.jpg" class="card-img" alt="Product">
-                            <button class="card-fav-icon"><i class="bi bi-heart"></i></button>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-name">Flower Necklace</h3>
-                            <div class="card-meta"></div>
-                            <div class="price-row">
-                                <p class="card-price">45 $</p>
-                                <a href="card.html" target="blank" class="card-basket-icon"><i
-                                        class="bi bi-basket"></i></a>
+                            <span class="card-fav-wrapper"><i class="bi bi-heart normal-heart"></i>
+                                <i class="bi bi-heart-fill active-heart"></i> </span>
+                            <div class="card-body">
+                                <h3 class="card-name">Flower Necklace</h3>
+                                <div class="card-meta"></div>
+                                <div class="price-row">
+                                    <p class="card-price">45 $</p>
+                                    <a href="card.html" target="blank" class="card-basket-icon"><i
+                                            class="bi bi-basket"></i></a>
+                                </div>
+                                <div class="card-status"></div>
                             </div>
-                            <div class="card-status"></div>
-                        </div>
                     </article>
 
-                    <!-- Daisy Necklace -->
                     <article class="card">
                         <div class="card-img-wrapper">
                             <img src="./website_image/epoxy_visual/flower_necklace2.jpg" class="card-img" alt="Product">
-                            <button class="card-fav-icon"><i class="bi bi-heart"></i></button>
+                            <span class="card-fav-wrapper"><i class="bi bi-heart normal-heart"></i>
+                                <i class="bi bi-heart-fill active-heart"></i> </span>
                         </div>
                         <div class="card-body">
                             <h3 class="card-name">Daisy Necklace</h3>
