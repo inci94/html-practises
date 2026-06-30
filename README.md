@@ -1,11 +1,11 @@
 ## Lımerence E-Commerce Project ##
 
-## Recent Updates and Improvements ##
+## Latest Updates and Improvements ##
 
-🤖 The background color of the page, which was considered to strain the eyes, was changed from light green tones to light pink tones; to ensure visual consistency, the same color was also used as the background for the slider on the homepage.
+🤖 A new page titled “Cleaning Products” has been added to the site. 
 
-🤖The nested layout in the code was fixed; this resolved the issue where icons and tooltips overlapped, appeared upside down, or extended beyond the card borders in product card views.
+🤖 A page has been designed to sell products for cleaning jewelry.
 
-🤖The issue where icon colors on the homepage matched the background color has been resolved.
+🤖 This page was designed based on the text “Check out our cleaning products” from the blog page.
 
-🤖Icons on the homepage now remain fixed as the page is scrolled.
+🤖 The visual design maintains consistency with the previous pages.
