@@ -2,10 +2,12 @@
 
 ## Latest Updates and Improvements ##
 
-🤖 A new page titled “Cleaning Products” has been added to the site. 
+🤖 A mock-up of a checkout page was designed. 
 
-🤖 A page has been designed to sell products for cleaning jewelry.
+🤖 When the “Sensitive Napkin” product is clicked on the “cart” page, it appears to have been added to the cart.
 
-🤖 This page was designed based on the text “Check out our cleaning products” from the blog page.
+🤖 The designed checkout page was linked to the “cart” button on other pages.
 
-🤖 The visual design maintains consistency with the previous pages.
+
+
+

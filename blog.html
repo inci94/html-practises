@@ -72,6 +72,43 @@
             padding-left: 8px;
         }
 
+        .navbar-cart {
+            position: relative;
+            display: inline-block;
+        }
+
+        .cart-dot {
+            position: absolute;
+            top: 2px;
+            right: -14px;
+            height: 14px;
+            width: 14px;
+            background-color: #ff0084;
+            border-radius: 50%;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            color: #ffffff;
+            font-weight: 700;
+
+            animation: pulseEfekti 1.10s infinite ease-in-out;
+        }
+
+        @keyframes pulseEfekti {
+            0% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.4;
+            }
+        }
+
         .main-content {
             margin-left: var(--sidebar-width);
             flex: 1;
@@ -163,6 +200,13 @@
                 <div class="nav-item"><a href="collection-ceramics.html" class="nav-link">Ceramics</a> </div>
                 <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a> </div>
                 <div class="nav-item"><a href="clean_product.html" class="nav-link">Clean Product</a></div>
+
+                <div class="nav-item">
+                    <a href="cart.html" class="nav-link navbar-cart">
+                        Cart <i class="bi bi-basket3"></i>
+                        <span class="cart-dot">1</span>
+                    </a>
+                </div>
             </nav>
         </aside>
 

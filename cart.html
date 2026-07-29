@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Limerence - cleaning Product Collection</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Limerence Purchase Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #a30f59;
             --primary-light: rgba(163, 15, 89, 0.1);
-            --neon: rgba(226, 7, 117, 0.8);
-            --bg-light: #f7def4;
+            --bg-light: #fbebf7;
+            --card-bg: #f2dbf7;
             --text-dark: #1a1a1a;
-            --sidebar-width: 260px;
             --transition: all 0.3s ease;
         }
 
@@ -27,30 +28,234 @@
             font-family: 'Noto Sans', sans-serif;
             background-color: var(--bg-light);
             color: var(--text-dark);
-        }
-
-        .app-layout {
             display: flex;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
+            padding: 20px;
         }
 
-        .header-title {
-            position: relative;
-            color: white;
-            font-weight: 200;
-            font-size: clamp(2rem, 5vw, 4.5rem);
-            letter-spacing: 12px;
-            text-transform: uppercase;
-            text-shadow: 0 0 20px var(--neon);
-            text-align: center;
+        .product-card {
+            background-color: var(--card-bg);
+            border-radius: 24px;
+            width: 340px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(163, 15, 89, 0.05);
+            border: 1px solid rgba(163, 15, 89, 0.1);
         }
 
-        .content-padding {
-            padding: 4rem 5%;
+        .product-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+            background-color: var(--card-bg);
         }
 
-        .grid {
+        .card-content {
+            padding: 12px;
+            display: flex;
             flex-direction: column;
+            gap: 8px;
         }
 
-        <div class="checkout-container"><h2>Satın Alınacak Ürünler</h2>< !-- 1. Ürün Kutusu --><div class="checkout-item"><img src="urun-kutusu1.jpg" alt="Ürün Görseli" class="item-img"><div class="item-details"><span class="item-name">Limerence Özel Kutusu - Klasik</span><div class="item-controls"><span class="item-price">150 TL</span><div class="counter"><button class="btn-minus"><i class="bx bx-minus"></i></button><span class="quantity">1</span><button class="btn-plus"><i class="bx bx-plus"></i></button></div></div></div></div>< !-- 2. ve 3. Ürün Kutuları da benzer yapıda alt alta gelecek --></div>
+        .product-name {
+            color: var(--primary);
+            font-size: 1.35rem;
+            font-weight: 500;
+        }
+
+        .price-volume-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .product-volume {
+            font-size: 0.85rem;
+            color: rgba(163, 15, 89, 0.7);
+            font-weight: 500;
+        }
+
+        .quantity-controller {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Yarı saydam beyaz arka plan */
+            border: 1px solid rgba(163, 15, 89, 0.15);
+            border-radius: 12px;
+            padding: 8px 16px;
+        }
+
+        .qty-btn {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            padding: 4px;
+        }
+
+        .qty-btn:hover {
+            transform: scale(1.25);
+        }
+
+        .qty-number {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .product-details {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(163, 15, 89, 0.08);
+            border-radius: 12px;
+            padding: 12px;
+            font-size: 0.9rem;
+        }
+
+        .product-details summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--primary);
+            outline: none;
+        }
+
+        .product-details p {
+            margin-top: 8px;
+            color: #4a4a4a;
+            line-height: 1.4;
+        }
+
+        .add-to-cart-btn {
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: var(--transition);
+            display: block;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #820b46;
+            box-shadow: 0 5px 15px rgba(163, 15, 89, 0.2);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay:target {
+            display: flex;
+        }
+
+        .popup-box {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            max-width: 90%;
+            width: 320px;
+        }
+
+        .popup-box h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .popup-box p {
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+        .close-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .close-btn:hover {
+            background-color: #820b46;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app-layout">
+        <div class="product-card">
+
+            <img src="./website_image/clean_product_visual/sensitive-napkin.jpg" alt="Sensitive Napkin"
+                class="product-image">
+
+            <div class="card-content">
+                <h3 class="product-name">Sensitive Napkin</h3>
+
+                <div class="price-volume-container">
+                    <span class="product-price">20 $</span>
+                    <span class="product-volume">200 pcs</span>
+                </div>
+
+                <div class="quantity-controller">
+                    <button class="qty-btn">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <span class="qty-number">1</span>
+                    <button class="qty-btn">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <details class="product-details">
+                    <summary>Product Details & Shipping</summary>
+                    <p>NatUral cotton cleansing wipe. Delivery takes 3–5 business days.</p>
+                </details>
+
+                <a href="#popup" class="add-to-cart-btn">Add to cart</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="overlay">
+        <div class="popup-box">
+            <h3>Great Decision!</h3>
+            <p>The product has been successfully added to your shopping cart.</p>
+            <a href="#" class="close-btn">Close</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
