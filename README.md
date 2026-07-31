@@ -2,11 +2,11 @@
 
 ## Latest Updates and Improvements ##
 
-🤖 A mock-up of a checkout page was designed. 
+🤖 A payment screen named pay.html was designed
+ 
+🤖 A link was added to connect the cart.html page to the pay.html page
 
-🤖 When the “Sensitive Napkin” product is clicked on the “cart” page, it appears to have been added to the cart.
-
-🤖 The designed checkout page was linked to the “cart” button on other pages.
+🤖 This made it possible to create a purchase flow leading to the payment page from other site pages where products are listed, via a “Cart” button that lights up with a notification simulating the presence of products in the cart.
 
 
 

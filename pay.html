@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #fceef2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #4a0e2e;
+            padding: 20px;
+        }
+
+        .checkout-container {
+            background: #f5e0f0;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(74, 14, 46, 0.08);
+            width: 500px;
+            max-width: 100%;
+        }
+
+        .section-title {
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        /* Ödeme Yöntemleri Izgarası (Grid) */
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .method-card {
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            transition: all 0.2s ease;
+            position: relative;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Radio butonlarını gizle */
+        .method-card input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .card-content .icon {
+            font-size: 22px;
+        }
+
+        .card-content .title {
+            font-size: 11px;
+            font-weight: bold;
+            color: #4a0e2e;
+            letter-spacing: 0.5px;
+        }
+
+        /* Seçili olan karta bordo çerçeve efekti */
+        .method-card:has(input:checked) {
+            border: 2px solid #800040;
+            box-shadow: 0 4px 12px rgba(128, 0, 64, 0.1);
+        }
+
+        /* Form Alanları */
+        .payment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            padding: 12px 0;
+            font-size: 13px;
+            outline: none;
+            color: #333;
+            background: transparent;
+        }
+
+        .form-group input::placeholder {
+            color: #aaa;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input:focus {
+            border-bottom-color: #800040;
+        }
+
+        /* Buton Tasarımı */
+        .submit-btn {
+            background-color: #800040;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #600030;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="checkout-container">
+        <h2 class="section-title">BİR ÖDEME YÖNTEMİ SEÇİN</h2>
+
+        <!-- Ödeme Yöntemi Kartları (Hepsi Izgara İçinde) -->
+        <div class="payment-methods">
+            <label class="method-card">
+                <input type="radio" name="payment-method" checked>
+                <div class="card-content">
+                    <span class="icon">💳</span>
+                    <span class="title">KREDİ/BANKA</span>
+                </div>
+            </label>
+
+            <label class="method-card">
+                <input type="radio" name="payment-method">
+                <div class="card-content">
+                    <span class="icon">💳</span>
+                    <span class="title">Visa</span>
+                </div>
+            </label>
+
+            <label class="method-card">
+                <input type="radio" name="payment-method">
+                <div class="card-content">
+                    <span class="icon">🎁</span>
+                    <span class="title">Gift Card</span>
+                </div>
+            </label>
+
+            <label class="method-card">
+                <input type="radio" name="payment-method">
+                <div class="card-content">
+                    <span class="icon">💳</span>
+                    <span class="title">Amex</span>
+                </div>
+            </label>
+
+            <label class="method-card">
+                <input type="radio" name="payment-method">
+                <div class="card-content">
+                    <span class="icon">💳</span>
+                    <span class="title">Master Card</span>
+                </div>
+            </label>
+        </div>
+
+        <!-- Form ve Başlık Kart İçine Alındı -->
+        <h2 class="section-title" style="margin-top: 20px;">PLEASE FILL IN THE PAYMENT DETAILS</h2>
+
+        <form class="payment-form">
+            <div class="form-group">
+                <input type="text" placeholder="CARD NUMBER" required>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="EXPIRATION DATE (MM/YY)" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Complete Payment</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

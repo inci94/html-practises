@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -38,7 +38,7 @@
         .product-card {
             background-color: var(--card-bg);
             border-radius: 24px;
-            width: 340px;
+            width: 400px;
             overflow: hidden;
             box-shadow: 0 10px 25px rgba(163, 15, 89, 0.05);
             border: 1px solid rgba(163, 15, 89, 0.1);
@@ -46,14 +46,14 @@
 
         .product-image {
             width: 100%;
-            height: 150px;
+            height: 180px;
             object-fit: cover;
             display: block;
             background-color: var(--card-bg);
         }
 
         .card-content {
-            padding: 12px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             gap: 8px;
@@ -138,7 +138,8 @@
             line-height: 1.4;
         }
 
-        .add-to-cart-btn {
+        /* En alt kısımdaki koyu Continue butonu stili */
+        .continue-btn {
             background-color: var(--primary);
             color: white;
             text-decoration: none;
@@ -151,7 +152,7 @@
             display: block;
         }
 
-        .add-to-cart-btn:hover {
+        .continue-btn:hover {
             background-color: #820b46;
             box-shadow: 0 5px 15px rgba(163, 15, 89, 0.2);
         }
@@ -239,10 +240,10 @@
 
                 <details class="product-details">
                     <summary>Product Details & Shipping</summary>
-                    <p>NatUral cotton cleansing wipe. Delivery takes 3–5 business days.</p>
+                    <p>Natural cotton cleansing wipe. Delivery takes 3–5 business days.</p>
                 </details>
 
-                <a href="#popup" class="add-to-cart-btn">Add to cart</a>
+                <a href="pay.html" class="continue-btn">Continue</a>
 
             </div>
         </div>
